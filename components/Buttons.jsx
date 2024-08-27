@@ -27,9 +27,9 @@ const Buttons = ({ currentVehicle, setVehicle, cameraAutoRotate, setCameraAutoRo
                 <button onClick={onBack}>Back to home</button>
             </div>
             <div className='button-select-object'>
-                <div className='arrow-left-object' onClick={onChangeObject('left')}>
+                {/* <div className='arrow-left-object' onClick={onChangeObject('left')}>
                     <FontAwesomeIcon icon={faChevronLeft} size='4x' />
-                </div>
+                </div> */}
                 <div className='vehicle-name'>
                     <h1>
                         <strong> {currentVehicle.name ? currentVehicle.name : 'No Vehicle Selected'} </strong>
@@ -40,9 +40,9 @@ const Buttons = ({ currentVehicle, setVehicle, cameraAutoRotate, setCameraAutoRo
                     <button onClick={onChangeObject(2)}>BODY 2</button>
                     <button onClick={onChangeObject(3)}>BODY 3</button>
                 </div>
-                <div className='arrow-right-object' onClick={onChangeObject('right')}>
+                {/* <div className='arrow-right-object' onClick={onChangeObject('right')}>
                     <FontAwesomeIcon icon={faChevronRight} size='4x' />
-                </div>
+                </div> */}
             </div>
 
             <div className='button-360'>

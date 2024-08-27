@@ -25,7 +25,7 @@ const vehicleConfigs = {
             name: 'Marv (S)',
             make: 'Marv',
             model: 'assets/models/vehicles/marv/sv/sv.glb',
-            default_addons: { box: 'container'},
+            default_addons: {},
             addons: {
                 box: {
                     name: 'Box',
@@ -52,7 +52,7 @@ const vehicleConfigs = {
             name: 'Marv (M)',
             make: 'Marv',
             model: 'assets/models/vehicles/marv/mv/mv.glb',
-            default_addons: {box: 'container'},
+            default_addons: {},
             addons: {
                 box: {
                     name: 'Box',
@@ -79,7 +79,7 @@ const vehicleConfigs = {
             name: 'Marv (L)',
             make: 'Marv',
             model: 'assets/models/vehicles/marv/lv/lv.glb',
-            default_addons: {box: 'container'},
+            default_addons: {},
             addons: {
                 box: {
                     name: 'Box',
