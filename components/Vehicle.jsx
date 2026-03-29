@@ -127,7 +127,6 @@ const Wheels = memo(({ rim, rim_diameter, rim_width, rim_color, rim_color_second
 // Body.
 const Body = memo(({ id, height, color, roughness, addons, setVehicle, container_color }) => {
     const vehicle = useRef()
-    // console.log(vehicle, 'vehicle');
     const { setObjectMaterials } = useMaterialProperties()
 
     // Set body color.
@@ -167,23 +166,6 @@ const Body = memo(({ id, height, color, roughness, addons, setVehicle, container
         </group>
     )
 })
-
-// Container
-// const Container = memo(({ container_color, container_id }) => {
-//     const container = useRef()
-//     const { setObjectMaterials } = useMaterialProperties()
-    
-//     useEffect(() => {
-//         setObjectMaterials(container.current, undefined, undefined, undefined, undefined, container_color)
-//     }, [setObjectMaterials])
-
-    
-//     return (
-//         <group ref={container} name='Container' key={container_id}>
-//             <Model path={vehicleConfigs.containers[container_id].model} />
-//         </group>
-//     )
-// })
 
 // Vehicle.
 const Vehicle = ({ currentVehicle, setVehicle }) => {
@@ -228,10 +210,6 @@ const Vehicle = ({ currentVehicle, setVehicle }) => {
                 color={color}
                 roughness={roughness}
             />
-            {/* {currentVehicle.container ? <Container 
-                container_color={container_color}
-                container_id={container}
-            /> : null} */}
         </group>
     )
 }

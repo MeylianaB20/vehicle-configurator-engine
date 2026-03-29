@@ -2,7 +2,7 @@ import { Environment, AccumulativeShadows, RandomizedLight } from '@react-three/
 import { BackSide } from 'three'
 import Ground from './Ground'
 
-export default function SceneEnvironment({ performanceDegraded }) {
+export default function SceneEnvironment() {
     return (
         <>
             <mesh name='Sky'>
@@ -16,11 +16,9 @@ export default function SceneEnvironment({ performanceDegraded }) {
 
             <Ground />
 
-            {!performanceDegraded && (
-                <AccumulativeShadows temporal scale={10}>
-                    <RandomizedLight position={[5, 5, -10]} radius={8} />
-                </AccumulativeShadows>
-            )}
+            <AccumulativeShadows temporal scale={10}>
+                <RandomizedLight position={[5, 5, -10]} radius={8} />
+            </AccumulativeShadows>
         </>
     )
 }

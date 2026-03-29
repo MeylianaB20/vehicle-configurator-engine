@@ -7,7 +7,7 @@ function Header({ children }) {
             <div></div>
             <h1>
                 <LogoIcon className='icon' />
-                <strong>Hino Project</strong>
+                <strong>Hiro Builder</strong>
             </h1>
             <div></div>
         </div>

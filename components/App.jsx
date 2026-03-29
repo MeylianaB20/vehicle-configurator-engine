@@ -2,9 +2,7 @@ import React, { useEffect, useReducer, useState } from 'react'
 
 import vehicleConfigs from '../vehicleConfigs'
 import Header from './Header'
-import Editor from './Editor'
 import Canvas from './Canvas'
-import Actions from './Actions'
 import VehicleTitle from './VehicleTitle'
 import Arrow from './Arrow'
 import SelectVehicle from './SelectVehicle'
@@ -76,19 +74,15 @@ export default function App() {
 
             {carSelected == false ? (
                 <>
-                    <SelectVehicle currentVehicle={currentVehicle} setVehicle={setVehicle} cameraAutoRotate={cameraAutoRotate} onResetLoading={() => setLoading(false)}/>
+                    <SelectVehicle currentVehicle={currentVehicle} setVehicle={setVehicle} cameraAutoRotate={cameraAutoRotate} />
                     <Arrow currentVehicle={currentVehicle} setVehicle={setVehicle} setCarSelected={setCarSelected}/> 
                 </>
             ) : (
                 <>        
-                    <Canvas currentVehicle={currentVehicle} setVehicle={setVehicle} cameraAutoRotate={cameraAutoRotate} onResetLoading={() => setLoading(false)}/>
+                    <Canvas currentVehicle={currentVehicle} setVehicle={setVehicle} cameraAutoRotate={cameraAutoRotate} />
                     <Buttons currentVehicle={currentVehicle} setVehicle={setVehicle} cameraAutoRotate={cameraAutoRotate} setCameraAutoRotate={setCameraAutoRotate} onBack={handleBack}/>
-                    {/* <Editor isActive={true} currentVehicle={currentVehicle} setVehicle={setVehicle} cameraAutoRotate={cameraAutoRotate} setCameraAutoRotate={setCameraAutoRotate} /> */}
                 </>
             )}
-
-
-            {/* <Actions currentVehicle={currentVehicle} savedVehicles={savedVehicles} setSavedVehicles={setSavedVehicles}  /> */}
         </div>
     )
 }

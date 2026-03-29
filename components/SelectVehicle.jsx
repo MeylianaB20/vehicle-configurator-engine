@@ -1,39 +1,15 @@
-import React, { useState, useEffect, Suspense } from 'react'
+import React, { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PerspectiveCamera, PerformanceMonitor } from '@react-three/drei'
-import { DefaultLoadingManager } from 'three'
+import { PerspectiveCamera, PerformanceMonitor } from '@react-three/drei'
 import Environment from './Environment'
-import Loader from './Loader'
 import Vehicle from './Vehicle'
 import Screenshot from './Screenshot'
 
 const SelectVehicle = ({ currentVehicle, setVehicle, cameraAutoRotate }) => {
-    const [isLoaded, setIsLoaded] = useState(false)
-    const [performanceDegraded, setPerformanceDegraded] = useState(false)
-
-    // Set loaded state based on default loading manager.
-    useEffect(() => {
-        const loadingManager = DefaultLoadingManager
-        loadingManager.onStart = () => {
-            console.log("Loading started"); 
-            setIsLoaded(false)
-        }
-        loadingManager.onLoad = () => {
-            console.log("Loading completed");
-            setIsLoaded(true)
-        }
-
-        return () => {
-            loadingManager.onStart = null
-            loadingManager.onLoad = null
-        }
-    }, [])
-
     return (
         <div id='vehicle'>
-            {/* {!isLoaded && <Loader />} */}
             <Canvas shadows>
-                <PerformanceMonitor onDecline={() => setPerformanceDegraded(true)} />
+                <PerformanceMonitor onDecline={() => {}} />
                 
                 <PerspectiveCamera makeDefault fov={60} position={[-4, 1.2, 6.5]} rotation={[0, -0.6, 0]}>
                     <pointLight position={[4, 2, 4]} intensity={0.75} />
@@ -43,7 +19,7 @@ const SelectVehicle = ({ currentVehicle, setVehicle, cameraAutoRotate }) => {
                     <Vehicle currentVehicle={currentVehicle} setVehicle={setVehicle} />
                 </Suspense>
 
-                <Environment performanceDegraded={performanceDegraded} />
+                <Environment />
 
                 <Screenshot />
             </Canvas>

@@ -43,7 +43,7 @@ const Arrow = ({ currentVehicle, setVehicle, setCarSelected}) => {
                 </h1>
             </div>
             <div className='button-select'>
-                <button onClick={onSelectCar()}>Pilih Mobil</button>
+                <button onClick={onSelectCar()}>Select Vehicle</button>
             </div>
         </div>
     )

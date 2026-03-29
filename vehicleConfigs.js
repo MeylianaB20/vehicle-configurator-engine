@@ -4,9 +4,7 @@ const vehicleConfigs = {
         lift: 0,
         color: '#B91818',
         roughness: 0.6,
-        addons: {
-            //  box: 'container',
-        },
+        addons: {},
         wheel_offset: 0,
         rim: 'toyota_4runner_5thgen',
         rim_color: 'silver',
@@ -17,7 +15,6 @@ const vehicleConfigs = {
         tire_diameter: 32,
         spare: true,
         name: 'Marv (S)',
-        // container: 'container_1',
         container_color: '#B91818',
     },
     vehicles: {

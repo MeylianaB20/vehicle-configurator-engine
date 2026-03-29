@@ -1,8 +1,8 @@
 {
-    "name": "4x4builder",
+    "name": "hiro-builder",
     "version": "2.0.0",
     "private": true,
-    "description": "4x4builder.com",
+    "description": "Hiro Builder - Interactive 3D Vehicle Customizer",
     "author": "Shane Vincent",
     "type": "module",
     "scripts": {
