@@ -75,7 +75,7 @@ Server runs at: `http://localhost:5174`
 
 ## Features
 
-- Multiple vehicle models to choose from
+- Three vehicle size options (S, M, L)
 - Real-time 3D preview
 - Body style selection (3 options)
 - Custom car color
