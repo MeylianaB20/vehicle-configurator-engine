@@ -51,8 +51,6 @@ npm run dev
 npm run build
 ```
 
-Server runs at: `http://localhost:5174`
-
 ---
 
 ## Project Structure
