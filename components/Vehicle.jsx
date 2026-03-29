@@ -170,7 +170,6 @@ const Body = memo(({ id, height, color, roughness, addons, setVehicle, container
 // Vehicle.
 const Vehicle = ({ currentVehicle, setVehicle }) => {
     const { id, color, roughness, lift, wheel_offset, rim, rim_diameter, rim_width, rim_color, rim_color_secondary, tire, tire_diameter, addons, container_color, name } = currentVehicle
-    console.log(currentVehicle, 'currentVehicle');
 
     // Get wheel (axle) height.
     const axleHeight = useMemo(() => {
